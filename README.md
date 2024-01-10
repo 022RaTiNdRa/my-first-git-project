@@ -3,7 +3,7 @@
 ## 📌 Overview
 A command-line based Student Management System built using Python.
 The project demonstrates clean code structure,   persistent storage,  
-unit testing, and Git/GitHub workflow.
+unit testing, and Git/GitHub workflow. 
 
 ---
 
