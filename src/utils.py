@@ -1,6 +1,6 @@
 import json
 
-FILE_PATH = "data/students.json"
+FILE_PATH = "data/students.json" 
 
 def load_students():
     try:
