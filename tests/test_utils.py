@@ -2,7 +2,7 @@ import os
 import json
 from src.utils import add_student, delete_student, search_student
 
-TEST_FILE = "data/test_students.json"
+TEST_FILE = "data/test_students.json" 
 
 def setup_module(module):
     with open(TEST_FILE, "w") as f:
