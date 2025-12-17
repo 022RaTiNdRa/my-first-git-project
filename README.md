@@ -15,6 +15,7 @@ unit testing, and Git/GitHub workflow.
 ---
 
 ## 📂 Project Structure
+```
 project/
 ├── src/
 │   ├── main.py        # CLI entry point
@@ -25,7 +26,7 @@ project/
 │   └── test_utils.py  # Unit tests
 ├── README.md
 
----
+```
 
 ## 🚀 Features
 - Add student
