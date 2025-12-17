@@ -1,36 +1,61 @@
-# Student Management System
+# Student Management System (CLI)
 
 ## 📌 Overview
+A command-line based Student Management System built using Python.
+The project demonstrates clean code structure, persistent storage,
+unit testing, and Git/GitHub workflow.
 
-A simple Python-based Student Management System created to practice
-Git, GitHub, and clean project structuring.
+---
 
 ## 🛠 Technologies Used
-
 - Python
-- Git
-- GitHub
+- Git & GitHub
+- Pytest (unit testing)
+
+---
 
 ## 📂 Project Structure
+project/
+├── src/
+│   ├── main.py        # CLI entry point
+│   └── utils.py       # Core logic
+├── data/
+│   └── students.json  # Persistent storage
+├── tests/
+│   └── test_utils.py  # Unit tests
+├── README.md
 
-src/
-├── main.py
-└── utils.py
-docs/
-└── requirements.md
+---
 
 ## 🚀 Features
+- Add student
+- View student list
+- Search student
+- Delete student
+- Persistent JSON-based storage
+- Command-line interface (CLI)
+- Unit testing with pytest
 
-- Add student records
-- Display student list
-- Modular and clean code structure
+---
 
-## 📈 Learning Outcomes
+## ▶️ How to Run
 
-- Hands-on Git and GitHub workflow
-- Multiple commits and version control
-- Repository structuring and documentation
+Add student:
+python src/main.py add --name Rahul
 
-## 🔗 GitHub Repository
+List students:
+python src/main.py list
 
-https://github.com/022RaTiNdRa/my-first-git-project
+Search student:
+python src/main.py search --name Rahul
+
+Delete student:
+python src/main.py delete --name Rahul
+
+## Run Tests
+python -m pytest
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/022RaTiNdRa/my-first-git-project.git
+cd my-first-git-project
