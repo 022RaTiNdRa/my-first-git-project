@@ -1,14 +1,10 @@
-def add_student(students, name):
-    students.append(name)
-    print(f"{name} added successfully")
-
-def show_students(students):
-    print("Student List:")
-    for s in students:
-        print("-", s)
+from utils import add_student, get_students
 
 students = []
 
-add_student(students, "Rahul")
-add_student(students, "Anita")
-show_students(students)
+print(add_student(students, "Rahul"))
+print(add_student(students, "Anita"))
+
+print("\nStudent List:")
+for student in get_students(students):
+    print("-", student)
