@@ -1,3 +1,4 @@
+import argparse
 from utils import (
     load_students,
     add_student,
@@ -7,53 +8,43 @@ from utils import (
 
 students = load_students()
 
-while True:
-    try:
-        print("\nStudent Management System")
-        print("1. Add student")
-        print("2. View students")
-        print("3. Delete student")
-        print("4. Search student")
-        print("5. Exit")
+parser = argparse.ArgumentParser(
+    description="Student Management System CLI"
+)
 
-        choice = input("Enter your choice (1-5): ").strip()
+parser.add_argument("action", choices=["add", "list", "delete", "search"])
+parser.add_argument("--name", help="Student name")
 
-        if choice == "1":
-            name = input("Enter student name: ").strip()
-            if name:
-                add_student(students, name)
-                print(f"{name} added successfully")
-            else:
-                print("Name cannot be empty.")
+args = parser.parse_args()
 
-        elif choice == "2":
-            print("\nStudent List:")
-            if not students:
-                print("No students found.")
-            else:
-                for s in students:
-                    print("-", s)
+if args.action == "add":
+    if args.name:
+        add_student(students, args.name)
+        print(f"{args.name} added successfully")
+    else:
+        print("Error: --name is required for add")
 
-        elif choice == "3":
-            name = input("Enter name to delete: ").strip()
-            if delete_student(students, name):
-                print(f"{name} deleted successfully")
-            else:
-                print("Student not found.")
+elif args.action == "list":
+    if not students:
+        print("No students found")
+    else:
+        for s in students:
+            print("-", s)
 
-        elif choice == "4":
-            name = input("Enter name to search: ").strip()
-            if search_student(students, name):
-                print(f"{name} exists in records")
-            else:
-                print("Student not found.")
-
-        elif choice == "5":
-            print("Exiting program. Goodbye!")
-            break
-
+elif args.action == "delete":
+    if args.name:
+        if delete_student(students, args.name):
+            print(f"{args.name} deleted")
         else:
-            print("Invalid choice. Please select 1-5.")
+            print("Student not found")
+    else:
+        print("Error: --name is required for delete")
 
-    except Exception as e:
-        print("An unexpected error occurred:", e)
+elif args.action == "search":
+    if args.name:
+        if search_student(students, args.name):
+            print("Student found")
+        else:
+            print("Student not found")
+    else:
+        print("Error: --name is required for search")
