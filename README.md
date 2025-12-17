@@ -1,13 +1,25 @@
-# My First Git Project
+# Student Management System
 
-## Student Management Mini Project
+## 📌 Overview
+A simple Python-based Student Management System created to practice
+Git, GitHub, and clean project structuring.
 
-This is a simple beginner project to practice:
+## 🛠 Technologies Used
+- Python
 - Git
 - GitHub
-- File structure
-- Commits and push
 
-### Features
-- Add student
+## 📂 Project Structure
+
+## 🚀 Features
+- Add student records
 - Display student list
+- Modular and clean code structure
+
+## 📈 Learning Outcomes
+- Hands-on Git and GitHub workflow
+- Multiple commits and version control
+- Repository structuring and documentation
+
+## 🔗 GitHub Repository
+https://github.com/022RaTiNdRa/my-first-git-project
