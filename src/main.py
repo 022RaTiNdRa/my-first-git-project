@@ -1,6 +1,6 @@
 import argparse
 from utils import (
-    load_students,
+    load_students, 
     add_student,
     delete_student,
     search_student

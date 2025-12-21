@@ -6,7 +6,7 @@ def load_students():
     try:
         with open(FILE_PATH, "r") as file:
             return json.load(file)
-    except (FileNotFoundError, json.JSONDecodeError):
+    except (FileNotFoundError,    json.JSONDecodeError):
         return []
 
 def save_students(students):
